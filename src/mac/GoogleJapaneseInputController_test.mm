@@ -647,7 +647,7 @@ TEST_F(GoogleJapaneseInputControllerTest, SwitchDisplayMode) {
   EXPECT_EQ(expected, *(mock_client_.selectedMode));
 }
 
-TEST_F(GoogleJapaneseInputControllerTest, commitText) {
+TEST_F(GoogleJapaneseInputControllerTest, DISABLED_commitText) {
   controller_.replacementRange = NSMakeRange(0, 1);
   [controller_ commitText:"foo" client:mock_client_];
 
