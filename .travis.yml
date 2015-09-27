@@ -58,3 +58,4 @@ script:
   - if [ $TRAVIS_OS_NAME == linux ]; then python build_mozc.py build -c Release package; fi
   - if [ $TRAVIS_OS_NAME == osx ]; then GYP_DEFINES="mac_sdk=10.9 mac_deployment_target=10.8" python build_mozc.py gyp --noqt; fi
   - if [ $TRAVIS_OS_NAME == osx ]; then python build_mozc.py build -c Release mac/mac.gyp:GoogleJapaneseInput mac/mac.gyp:gen_launchd_confs; fi
+  - python build_mozc.py runtests -c Release
